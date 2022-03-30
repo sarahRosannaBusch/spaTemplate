@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box; /* padding and border are included in total width/height of all elements */
+    margin: 0px;
+}
+
+:root {
+    --bgColour: #232323;
+    --fontColour: white;
+    --fontSize: calc(10px + 2vmin);
+}
+
+body {
+    background-color: var(--bgColour);
+    color: var(--fontColour);    
+    font-size: var(--fontSize);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex: 0.25;
+}
+
+main {
+    flex: 0.5;
+}
+
+footer {
+    flex: 0.25;
+}

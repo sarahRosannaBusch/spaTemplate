@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box; /* padding and border are included in total width/height of all elements */
+    margin: 0px;
+}
+
+body {
+    background-color: black;
+    color: white;    
+}
+
+$bgColour1: #121212;
+$bgColour2: #232323;
+$bgColour3: #343434;
+$fontColour: white;
+$fontSize: calc(10px + 2vmin);
+
+#webPage {
+    background-color: $bgColour1;
+    color: $fontColour;
+    font-size: $fontSize;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    header {
+        flex: 0.25;
+        background-color: $bgColour2;
+    }
+    
+    main {
+        flex: 0.5;
+        background-color: $bgColour3;
+    }
+    
+    footer {
+        flex: 0.25;
+        background-color: $bgColour2;
+    }
+}

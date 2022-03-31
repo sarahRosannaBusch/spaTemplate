@@ -1,31 +1,31 @@
 * {
-    box-sizing: border-box; /* padding and border are included in total width/height of all elements */
-    margin: 0px;
-}
-
-:root {
-    --bgColour: #232323;
-    --fontColour: white;
-    --fontSize: calc(10px + 2vmin);
+  box-sizing: border-box;
+  /* padding and border are included in total width/height of all elements */
+  margin: 0px;
 }
 
 body {
-    background-color: var(--bgColour);
-    color: var(--fontColour);    
-    font-size: var(--fontSize);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+  background-color: black;
+  color: white;
 }
 
-header {
-    flex: 0.25;
+#webPage {
+  background-color: #121212;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-
-main {
-    flex: 0.5;
+#webPage header {
+  flex: 0.25;
+  background-color: #232323;
 }
-
-footer {
-    flex: 0.25;
+#webPage main {
+  flex: 0.5;
+  background-color: #343434;
+}
+#webPage footer {
+  flex: 0.25;
+  background-color: #232323;
 }

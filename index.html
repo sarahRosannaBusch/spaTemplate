@@ -11,21 +11,29 @@
     <link rel='stylesheet' href='styles.css' />
 </head>
 <body onload='main.init()'>
+<div id="webPage">   
     <header>
         <h1>HTML Essentials</h1>
+        <nav>
+            <button onclick='main.nav("views/basicTags.html")'>
+                Basic Tags
+            </button>
+            <button onclick="main.nav('views/tables.html')">
+                Tables
+            </button>
+            <button onclick="main.nav('views/lists.html')">
+                Lists
+            </button>
+        </nav>
     </header>
-    <nav>
-        <button onclick='main.nav("htmlTags.html")'>
-            HTML Tag Examples
-        </button>
-    </nav>
     <main>
         Main
     </main>
     <footer>
         Footer
     </footer>
-    <script src='https://cdn.jsdelivr.net/gh/sarahRosannaBusch/f.js/f.js'></script>
-    <script src='main.js'></script>
+</div> 
+<script src='https://cdn.jsdelivr.net/gh/sarahRosannaBusch/f.js/f.js'></script>
+<script src='main.js'></script>
 </body>
 </html>

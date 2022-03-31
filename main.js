@@ -17,12 +17,12 @@ var main = (function() {
         elem.header = f.html.getElem('header');
         elem.main = f.html.getElem('main');
         elem.footer = f.html.getElem('footer');
-
-        f.http.post('noFile', 'pageData');
+        that.nav('views/basicTags.html');
+        f.http.post('noFile', 'pageLoaded');
     }
 
     that.nav = function(view) {
-        f.http.get('views/' + view, function(pageData) {
+        f.http.get(view, function(pageData) {
             elem.main.innerHTML = pageData;
         });
     }

@@ -17,7 +17,7 @@ var main = (function() {
         elem.header = f.html.getElem('header');
         elem.main = f.html.getElem('main');
         elem.footer = f.html.getElem('footer');
-        that.nav('views/basicTags.html');
+        that.nav('views/view1.html');
         f.http.post('noFile', 'pageLoaded');
     }
 

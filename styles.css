@@ -18,14 +18,33 @@ body {
   flex-direction: column;
 }
 #webPage header {
-  flex: 0.25;
+  height: 5em;
   background-color: #232323;
 }
 #webPage main {
-  flex: 0.5;
+  flex: 1;
+  /* to fill space between header and footer */
   background-color: #343434;
 }
 #webPage footer {
   flex: 0.25;
   background-color: #232323;
 }
+
+#view3, #view2, #view1 {
+  height: 100%;
+}
+
+#view1 {
+  background: red;
+}
+
+#view2 {
+  background: green;
+}
+
+#view3 {
+  background: blue;
+}
+
+/*# sourceMappingURL=styles.css.map */

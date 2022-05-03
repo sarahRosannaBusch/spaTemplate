@@ -23,12 +23,12 @@ $fontSize: calc(10px + 2vmin);
     flex-direction: column;
 
     header {
-        flex: 0.25;
+        height: 5em;
         background-color: $bgColour2;
     }
     
     main {
-        flex: 0.5;
+        flex: 1; /* to fill space between header and footer */
         background-color: $bgColour3;
     }
     
@@ -36,4 +36,23 @@ $fontSize: calc(10px + 2vmin);
         flex: 0.25;
         background-color: $bgColour2;
     }
+}
+
+%views {
+    height: 100%;
+}
+
+#view1 {
+    @extend %views;
+    background: red;
+}
+
+#view2 {
+    @extend %views;
+    background: green;
+}
+
+#view3 {
+    @extend %views;
+    background: blue;
 }

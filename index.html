@@ -7,22 +7,22 @@
     <meta name='description' content='SPA template for web pages and apps using html, css, javascript, and node.js' />
     <meta name='date' content='30 March 2022' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' /> <!-- for responsiveness -->
-    <link rel='icon shortcut' href='img/icon.png' /> <!-- shown in browser tab -->
+    <link rel='icon shortcut' href='assets/icon.png' /> <!-- shown in browser tab -->
     <link rel='stylesheet' href='styles.css' />
 </head>
 <body onload='main.init()'>
 <div id="webPage">   
     <header>
-        <h1>HTML Essentials</h1>
+        <h1>Header</h1>
         <nav>
-            <button onclick='main.nav("views/basicTags.html")'>
-                Basic Tags
+            <button onclick='main.nav("views/view1.html")'>
+                nav 1
             </button>
-            <button onclick="main.nav('views/tables.html')">
-                Tables
+            <button onclick="main.nav('views/view2.html')">
+                nav 2
             </button>
-            <button onclick="main.nav('views/lists.html')">
-                Lists
+            <button onclick="main.nav('views/view3.html')">
+                nav 3
             </button>
         </nav>
     </header>
@@ -30,7 +30,7 @@
         Main
     </main>
     <footer>
-        Footer
+        <h3>Footer</h3>
     </footer>
 </div> 
 <script src='https://cdn.jsdelivr.net/gh/sarahRosannaBusch/f.js/f.js'></script>

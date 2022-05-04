@@ -17,34 +17,51 @@ body {
   display: flex;
   flex-direction: column;
 }
+#webPage header, #webPage main, #webPage footer {
+  padding: 1em;
+}
 #webPage header {
-  height: 5em;
-  background-color: #232323;
+  background-color: #343434;
 }
 #webPage main {
   flex: 1;
   /* to fill space between header and footer */
-  background-color: #343434;
+  background-color: #121212;
 }
 #webPage footer {
-  flex: 0.25;
   background-color: #232323;
 }
 
-#view3, #view2, #view1 {
+#view1 {
   height: 100%;
 }
-
-#view1 {
-  background: red;
+#view1 h2, #view1 p {
+  color: #c8250e;
+}
+#view1 hr {
+  border-color: #c8250e;
 }
 
 #view2 {
-  background: green;
+  height: 100%;
+}
+#view2 h2, #view2 p {
+  color: #5fa638;
+}
+#view2 hr {
+  border-color: #5fa638;
 }
 
 #view3 {
-  background: blue;
+  height: 100%;
+}
+#view3 h2, #view3 p {
+  color: #7cc9ff;
+}
+#view3 hr {
+  border-color: #7cc9ff;
 }
 
-/*# sourceMappingURL=styles.css.map */
+a {
+  color: #b684ed;
+}

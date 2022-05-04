@@ -4,7 +4,7 @@
  * @file    server.js
  * @brief   basic nodeJS web server
  * @author  Sarah Rosanna Busch
- * @date    30 March 2022
+ * @date    3 May 2022
  */
 
 const http = require('http');
@@ -12,6 +12,17 @@ const url = require('url');
 const fs = require('fs');
 
 const PORT = 9999;
+
+// follow the steps at https://nodejs.org/en/knowledge/HTTP/servers/how-to-create-a-HTTPS-server/
+// to use https instead of http
+//
+// const https = require('https');
+// const options = {
+//     key: fs.readFileSync('key.pem'),
+//     cert: fs.readFileSync('cert.pem')
+// };
+//
+// const server = new https.createServer(options, function (req, res) {
 
 const server = new http.createServer(function (req, res) {
     var query = url.parse(req.url, true);  

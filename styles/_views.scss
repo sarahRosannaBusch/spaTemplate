@@ -1,0 +1,11 @@
+@mixin views($colour) {
+    height: 100%;
+
+    h2, p {
+        color: $colour;
+    }
+
+    hr {
+        border-color: $colour;
+    }
+}

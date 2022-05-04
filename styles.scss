@@ -1,3 +1,6 @@
+
+@import 'styles/views.scss';
+
 * {
     box-sizing: border-box; /* padding and border are included in total width/height of all elements */
     margin: 0px;
@@ -14,6 +17,13 @@ $bgColour3: #343434;
 $fontColour: white;
 $fontSize: calc(10px + 2vmin);
 
+$red: #c8250e;
+$orange: #df7233;
+$yellow: #d6d950;
+$green: #5fa638;
+$blue: #7cc9ff;
+$purple: #b684ed;
+
 #webPage {
     background-color: $bgColour1;
     color: $fontColour;
@@ -22,37 +32,36 @@ $fontSize: calc(10px + 2vmin);
     display: flex;
     flex-direction: column;
 
+    header, main, footer {
+        padding: 1em;
+    }
+
     header {
-        height: 5em;
-        background-color: $bgColour2;
+        background-color: $bgColour3;
     }
     
     main {
         flex: 1; /* to fill space between header and footer */
-        background-color: $bgColour3;
+        background-color: $bgColour1;
     }
     
     footer {
-        flex: 0.25;
         background-color: $bgColour2;
     }
 }
 
-%views {
-    height: 100%;
-}
-
 #view1 {
-    @extend %views;
-    background: red;
+    @include views($red);
 }
 
 #view2 {
-    @extend %views;
-    background: green;
+    @include views($green);
 }
 
 #view3 {
-    @extend %views;
-    background: blue;
+    @include views($blue);
+}
+
+a {
+    color: $purple;
 }

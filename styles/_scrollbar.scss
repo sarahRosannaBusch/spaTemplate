@@ -1,0 +1,21 @@
+@mixin scrollbar($width, $colour) {
+    /* width */
+    ::-webkit-scrollbar {
+        width: $width;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: darken($colour, 20%);
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $colour;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: lighten($colour, 20%);
+    }
+}

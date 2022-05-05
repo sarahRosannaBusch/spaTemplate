@@ -10,20 +10,26 @@
 
 var main = (function() {
     var that = {}; //public methods and objects
-    var vars = {}; //variables available to all functions in main
     var elem = {}; //store dom elems once on load for efficiency
+    var vars = {}; //variables available to all functions in main
 
     that.init = function() {
-        elem.header = f.html.getElem('header');
+        elem.navBtns = f.html.getElems('button');
         elem.main = f.html.getElem('main');
-        elem.footer = f.html.getElem('footer');
-        that.nav('views/view1.html');
+        vars.view = 1;
+        that.nav(vars.view);
         f.http.post('noFile', 'pageLoaded');
     }
 
     that.nav = function(view) {
-        f.http.get(view, function(pageData) {
+        let file = 'views/view' + view + '.html';
+        let viewIdx = vars.view - 1;
+        elem.navBtns[viewIdx].classList.remove('selected');
+        f.http.get(file, (pageData) => {
             elem.main.innerHTML = pageData;
+            vars.view = view;
+            viewIdx = view - 1;
+            elem.navBtns[viewIdx].classList.add('selected');
         });
     }
 

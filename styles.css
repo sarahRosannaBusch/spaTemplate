@@ -2,6 +2,22 @@
   box-sizing: border-box;
   /* padding and border are included in total width/height of all elements */
   margin: 0px;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+* ::-webkit-scrollbar {
+  width: 10px;
+}
+* ::-webkit-scrollbar-track {
+  background: #954517;
+}
+* ::-webkit-scrollbar-thumb {
+  background: #df7233;
+}
+* ::-webkit-scrollbar-thumb:hover {
+  background: #edaf8b;
 }
 
 body {
@@ -13,6 +29,7 @@ body {
   background-color: #121212;
   color: white;
   font-size: calc(10px + 2vmin);
+  font-family: default;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,9 +44,20 @@ body {
   flex: 1;
   /* to fill space between header and footer */
   background-color: #121212;
+  overflow-y: auto;
 }
 #webPage footer {
   background-color: #232323;
+}
+
+button {
+  background: #454545;
+  border: none;
+  padding: 0.5em 1em;
+}
+
+button.selected {
+  background: #d6d950;
 }
 
 #view1 {

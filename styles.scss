@@ -1,21 +1,14 @@
 
 @import 'styles/views.scss';
-
-* {
-    box-sizing: border-box; /* padding and border are included in total width/height of all elements */
-    margin: 0px;
-}
-
-body {
-    background-color: black;
-    color: white;    
-}
+@import 'styles/scrollbar.scss';
 
 $bgColour1: #121212;
 $bgColour2: #232323;
 $bgColour3: #343434;
+$bgColour4: #454545;
 $fontColour: white;
 $fontSize: calc(10px + 2vmin);
+$fontFamily: default;
 
 $red: #c8250e;
 $orange: #df7233;
@@ -24,10 +17,22 @@ $green: #5fa638;
 $blue: #7cc9ff;
 $purple: #b684ed;
 
+* {
+    box-sizing: border-box; /* padding and border are included in total width/height of all elements */
+    margin: 0px;
+    @include scrollbar(10px, $orange);
+}
+
+body {
+    background-color: black;
+    color: white;    
+}
+
 #webPage {
     background-color: $bgColour1;
     color: $fontColour;
     font-size: $fontSize;
+    font-family: $fontFamily;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -43,11 +48,22 @@ $purple: #b684ed;
     main {
         flex: 1; /* to fill space between header and footer */
         background-color: $bgColour1;
+        overflow-y: auto;
     }
     
     footer {
         background-color: $bgColour2;
     }
+}
+
+button {
+    background: $bgColour4;
+    border: none;
+    padding: 0.5em 1em;
+}
+
+button.selected {
+    background: $yellow;
 }
 
 #view1 {
@@ -65,3 +81,4 @@ $purple: #b684ed;
 a {
     color: $purple;
 }
+

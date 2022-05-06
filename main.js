@@ -4,8 +4,8 @@
  * @filename    main.js
  * @brief       javascript template using the module pattern
  * @author      Sarah Rosanna Busch
- * @version     1.0
- * @date        30 March 2022
+ * @version     1.1
+ * @date        6 May 2022
  */
 
 var main = (function() {

@@ -25,7 +25,7 @@ var main = (function() {
         let file = 'views/view' + view + '.html';
         let viewIdx = vars.view - 1;
         elem.navBtns[viewIdx].classList.remove('selected');
-        f.http.get(file, (pageData) => {
+        f.http.get(file, function(pageData) {
             elem.main.innerHTML = pageData;
             vars.view = view;
             viewIdx = view - 1;

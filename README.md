@@ -15,7 +15,7 @@ Follow the patterns established here to create responsive, accessible, user-focu
 6. Open webpage in browser at `localhost:9999/index.html`
 7. Delete my example content and add your own, or rearrange things to how you like them and save as your own template repository
 
-## The code, explained
+## Overview
 
 The purpose of this template is to set up a workspace that contains only the essential starting components for front-end web development. It has minimal dependencies so you can add your favourite libraries and frameworks without any conflicts.
 
@@ -23,18 +23,18 @@ The purpose of this template is to set up a workspace that contains only the ess
 
 I like to keep a project's primary files at the top level. GitHub Pages looks for an index.html file at the top of a repo, so that is required. The server should always be at the top too, so relative pathing is straightforward. And keeping main.js and the primary stylesheet at the top makes everything easy to follow and find.
 
-#### server.js
+### server.js
 
 A bare-bones nodeJS server that handles simple GET and POST requests. Run this server as the simplest way to get around CORS policy blockage so that AJAX requests will work in your development environment. Note that GitHub Pages only host webpages, they do not run server files, so if you extend this server to handle back-end changes you will need to serve your site elsewhere.
 
-#### index.html
+### index.html
 
 As a single-page application, all meta data is included here as well as links to all stylesheets. All scripts are loaded at the bottom so the primary markup loads first.
 
-#### styles.scss
+### styles.scss
 
 If you only require a few style classes or you don't want to use Sass, you can delete this file (and the styles folder) and just modify the .css file directly. But if you have a lot styles to manage, setting yourself up with modular scss components will save you a lot of headache. Or you can swap this out with whatever css framework you like best.
 
-#### main.js
+### main.js
 
 I like to treat every javascript file as a single module that only adds one variable to the global namespace (ideally whose name the same as the filename.) Using the module pattern, as I have here, makes controlling which objects are public and which are private easy and robust. Page initialization, navigation, and communications with the server should be handled in main. All other scripts should be independent modules stored in the 'libs' folder, except view controllers which can go under 'views' or be put in a 'viewControllers' folder, if you prefer.

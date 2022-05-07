@@ -42,56 +42,50 @@ body {
 #webPage header {
   background-color: #343434;
 }
+#webPage header button {
+  background: #454545;
+  border: none;
+  padding: 0.5em 1em;
+}
+#webPage header button.selected {
+  background: #d6d950;
+}
 #webPage main {
   flex: 1;
   /* to fill space between header and footer */
   background-color: #121212;
   overflow-y: auto;
 }
+#webPage main #view1 {
+  height: 100%;
+}
+#webPage main #view1 h2, #webPage main #view1 p {
+  color: #c8250e;
+}
+#webPage main #view1 hr {
+  border-color: #c8250e;
+}
+#webPage main #view2 {
+  height: 100%;
+}
+#webPage main #view2 h2, #webPage main #view2 p {
+  color: #5fa638;
+}
+#webPage main #view2 hr {
+  border-color: #5fa638;
+}
+#webPage main #view3 {
+  height: 100%;
+}
+#webPage main #view3 h2, #webPage main #view3 p {
+  color: #7cc9ff;
+}
+#webPage main #view3 hr {
+  border-color: #7cc9ff;
+}
 #webPage footer {
   background-color: #232323;
 }
-
-button {
-  background: #454545;
-  border: none;
-  padding: 0.5em 1em;
-}
-
-button.selected {
-  background: #d6d950;
-}
-
-#view1 {
-  height: 100%;
-}
-#view1 h2, #view1 p {
-  color: #c8250e;
-}
-#view1 hr {
-  border-color: #c8250e;
-}
-
-#view2 {
-  height: 100%;
-}
-#view2 h2, #view2 p {
-  color: #5fa638;
-}
-#view2 hr {
-  border-color: #5fa638;
-}
-
-#view3 {
-  height: 100%;
-}
-#view3 h2, #view3 p {
-  color: #7cc9ff;
-}
-#view3 hr {
-  border-color: #7cc9ff;
-}
-
-a {
+#webPage footer a {
   color: #b684ed;
 }

@@ -45,42 +45,42 @@ body {
 
     header {
         background-color: $bgColour3;
+
+        button {
+            background: $bgColour4;
+            border: none;
+            padding: 0.5em 1em;
+        }
+        
+        button.selected {
+            background: $yellow;
+        }
     }
     
     main {
         flex: 1; /* to fill space between header and footer */
         background-color: $bgColour1;
         overflow-y: auto;
+
+        #view1 {
+            @include views($red);
+        }
+        
+        #view2 {
+            @include views($green);
+        }
+        
+        #view3 {
+            @include views($blue);
+        }
     }
     
     footer {
         background-color: $bgColour2;
+
+        a {
+            color: $purple;
+        }
     }
-}
-
-button {
-    background: $bgColour4;
-    border: none;
-    padding: 0.5em 1em;
-}
-
-button.selected {
-    background: $yellow;
-}
-
-#view1 {
-    @include views($red);
-}
-
-#view2 {
-    @include views($green);
-}
-
-#view3 {
-    @include views($blue);
-}
-
-a {
-    color: $purple;
 }
 

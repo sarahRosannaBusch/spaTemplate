@@ -31,6 +31,8 @@ body {
   font-size: calc(10px + 2vmin);
   font-family: default;
   height: 100vh;
+  max-width: 1000px;
+  margin: auto;
   display: flex;
   flex-direction: column;
 }

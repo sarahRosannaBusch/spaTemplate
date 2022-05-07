@@ -4,8 +4,8 @@
  * @filename   f.js
  * @brief      javascript essentials
  * @author     Sarah Rosanna Busch
- * @version    1.1
- * @date       3 May 2022
+ * @version    1.2
+ * @date       6 May 2022
  * @license    MIT License
  * @repo       https://github.com/sarahRosannaBusch/f.js
  */
@@ -62,8 +62,15 @@ var f = (function(){
             xhr.send();
         }
 
-        that.post = function(file, data) {
+        that.post = function(file, data, callback) {
             var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if(this.readyState === 4) { //request finished and response is ready
+                    if(this.status === 200) { //ok
+                        callback(this.responseText);
+                    }
+                }
+            };
             xhr.open("POST", file, true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.send(data);

@@ -18,7 +18,9 @@ var main = (function() {
         elem.main = f.html.getElem('main');
         vars.view = 1;
         that.nav(vars.view);
-        f.http.post('noFile', 'pageLoaded');
+        f.ajax.post('noFile', 'pageLoaded', function(data) {
+            console.log(data);
+        });
     }
 
     that.nav = function(view) {

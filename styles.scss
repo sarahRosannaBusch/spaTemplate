@@ -34,6 +34,8 @@ body {
     font-size: $fontSize;
     font-family: $fontFamily;
     height: 100vh;
+    max-width: 1000px;
+    margin: auto;
     display: flex;
     flex-direction: column;
 
